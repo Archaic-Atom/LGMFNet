@@ -29,10 +29,7 @@ class YourDataloader(jf.UserTemplate.DataHandlerTemplate):
 
     def split_data(self, batch_data: tuple, is_training: bool) -> list:
         self.__start_time = time.time()
-        if is_training:
-            # return input_data_list, label_data_list
-            return [], []
-            # return input_data, supplement
+        # return input_data_list, label_data_list
         return [], []
 
     def show_train_result(self, epoch: int, loss:
@@ -52,9 +49,6 @@ class YourDataloader(jf.UserTemplate.DataHandlerTemplate):
     def save_result(self, output_data: list, supplement: list,
                     img_id: int, model_id: int) -> None:
         assert self.__train_dataset is not None
-        # args = self.__args
-        # save method
-        pass
 
     def show_intermediate_result(self, epoch: int,
                                  loss: list, acc: list) -> str:
