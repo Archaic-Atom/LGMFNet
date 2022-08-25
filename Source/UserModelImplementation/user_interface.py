@@ -27,9 +27,9 @@ class UserInterface(jf.UserTemplate.NetWorkInferenceTemplate):
 
     @staticmethod
     def __str2bool(arg: str) -> bool:
-        if arg.lower() in ('yes', 'true', 't', 'y', '1'):
+        if arg.lower() in {'yes', 'true', 't', 'y', '1'}:
             return True
-        elif arg.lower() in ('no', 'false', 'f', 'n', '0'):
+        elif arg.lower() in {'no', 'false', 'f', 'n', '0'}:
             return False
         else:
             raise argparse.ArgumentTypeError('Boolean value expected.')
